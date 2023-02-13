@@ -1,0 +1,62 @@
+          <!-- Code Testing -->
+
+          <style>
+            .collapse {
+              height: 0;
+              overflow: hidden;
+              transition: height 3s;
+            }
+
+            @keyframes showMenu {
+              0% {
+                height: 0;
+              }
+
+              100% {
+                height: auto;
+              }
+            }
+
+            @keyframes hideMenu {
+              0% {
+                height: auto;
+              }
+
+              100% {
+                height: 0;
+              }
+            }
+
+            .collapse.show {
+              animation: showMenu 3s forwards;
+            }
+
+            .collapse.hide {
+              animation: hideMenu 3s forwards;
+            }
+
+            #aa{
+              height: 100px;
+              overflow: hidden;
+            }
+          </style>
+          <script>
+            var collapse_state = true
+            document.getElementById("toggleButton").addEventListener("click", function () {
+              var sad = document.getElementById("collapseMenu");
+              sad.classList.toggle("show");
+            });
+
+          </script>
+
+          <button id="toggleButton">Toggle Menu</button>
+
+          <div id="aa">
+            <div>
+            <p>Menu item 1</p>
+            <p>Menu item 2</p>
+            <p>Menu item 3</p>
+            </div>
+          </div>
+          <!-- Code Testing -->
+
